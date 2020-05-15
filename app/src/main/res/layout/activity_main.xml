@@ -2,6 +2,7 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/gridLayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity">
@@ -23,7 +24,7 @@
             android:layout_width="10dp"
             android:layout_height="40dp"
             android:layout_weight="1"
-            android:background="#FF5F4B"
+            android:background="#F9A825"
             android:gravity="center"
             android:text="30s"
             android:textAlignment="center"
@@ -43,14 +44,70 @@
         <TextView
             android:id="@+id/scoreTextView"
             android:layout_width="10dp"
-            android:gravity="center"
             android:layout_height="40dp"
             android:layout_weight="1"
             android:background="#61B9ED"
+            android:gravity="center"
             android:text="0/0"
             android:textAlignment="center"
             android:textSize="24sp"
             android:textStyle="bold" />
     </LinearLayout>
+
+    <androidx.gridlayout.widget.GridLayout
+        android:id="@+id/optionsGrid"
+        android:layout_width="176dp"
+        android:layout_height="97dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="430dp"
+        android:textAlignment="center"
+        app:alignmentMode="alignBounds"
+        app:columnCount="2"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout"
+        app:layout_constraintVertical_bias="1.0"
+        app:rowCount="2">
+
+        <Button
+            android:id="@+id/option2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="#6A1B9A"
+            android:text="21"
+            app:layout_column="1"
+            app:layout_row="0" />
+
+        <Button
+            android:id="@+id/option3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="#0277BD"
+            android:text="43"
+            app:layout_column="0"
+            app:layout_row="1" />
+
+        <Button
+            android:id="@+id/option4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="#558B2F"
+            android:text="5"
+            app:layout_column="1"
+            app:layout_row="1" />
+
+        <Button
+            android:id="@+id/option1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="#D84315"
+            android:text="19"
+            app:layout_column="0"
+            app:layout_row="0" />
+
+    </androidx.gridlayout.widget.GridLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
