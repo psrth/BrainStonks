@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/gridLayout"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_height="wrap_content"
     tools:context=".MainActivity">
 
     <LinearLayout
@@ -78,6 +78,8 @@
             android:layout_height="wrap_content"
             android:background="#6A1B9A"
             android:text="21"
+            android:textSize="18sp"
+            android:textStyle="bold"
             app:layout_column="1"
             app:layout_row="0" />
 
@@ -87,6 +89,8 @@
             android:layout_height="wrap_content"
             android:background="#0277BD"
             android:text="43"
+            android:textSize="18sp"
+            android:textStyle="bold"
             app:layout_column="0"
             app:layout_row="1" />
 
@@ -96,6 +100,8 @@
             android:layout_height="wrap_content"
             android:background="#558B2F"
             android:text="5"
+            android:textSize="18sp"
+            android:textStyle="bold"
             app:layout_column="1"
             app:layout_row="1" />
 
@@ -105,9 +111,42 @@
             android:layout_height="wrap_content"
             android:background="#D84315"
             android:text="19"
+            android:textSize="18sp"
+            android:textStyle="bold"
             app:layout_column="0"
             app:layout_row="0" />
 
     </androidx.gridlayout.widget.GridLayout>
+
+    <TextView
+        android:id="@+id/rightWrongTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:text="TextView"
+        android:textAlignment="center"
+        android:textAllCaps="false"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/optionsGrid"
+        tools:text="Right :)" />
+
+    <Button
+        android:id="@+id/button9"
+        android:layout_width="115dp"
+        android:layout_height="35dp"
+        android:background="#080C27"
+        android:text="Play Again"
+        android:textAlignment="center"
+        android:textAllCaps="false"
+        android:textColor="#FFFFFF"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/rightWrongTextView" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
